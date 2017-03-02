@@ -8,7 +8,6 @@ RUN apk update && \
 RUN apk add openssh-client
 
 RUN mkdir /root/.ssh && chmod 700 /root/.ssh
-ADD remote1 /root/.ssh/remote1
-ADD config /root/.ssh/config
+ADD remote /root/.ssh/remote
 
 CMD ["ash"]

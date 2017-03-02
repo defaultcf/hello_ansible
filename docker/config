@@ -1,5 +1,0 @@
-Host remote1
-    HostName 172.27.0.2
-    User root
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/remote1

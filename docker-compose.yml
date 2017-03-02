@@ -14,6 +14,16 @@ services:
         build:
             context: ./docker
             dockerfile: Dockerfile-remote
-        environment:
-            - ansible_python_interpreter=/usr/local/bin/python
+        tty: true
+
+    remote2:
+        build:
+            context: ./docker
+            dockerfile: Dockerfile-remote
+        tty: true
+
+    remote3:
+        build:
+            context: ./docker
+            dockerfile: Dockerfile-remote
         tty: true

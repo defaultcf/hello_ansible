@@ -6,7 +6,7 @@ RUN apk update && \
 
 ADD sshd_config /etc/ssh/sshd_config
 
-ADD remote1.pub /root/.ssh/authorized_keys
+ADD remote.pub /root/.ssh/authorized_keys
 RUN chmod 600 /root/.ssh/authorized_keys
 
 EXPOSE 22

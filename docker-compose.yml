@@ -8,8 +8,6 @@ services:
             - remote1
         volumes:
             - ./ansible:/etc/ansible
-        environment:
-            - ansible_python_interpreter=/usr/local/bin/python
         tty: true
 
     remote1:

@@ -1,0 +1,14 @@
+FROM python:3.6.0-alpine
+
+RUN apk update && \
+    apk add --virtual builder --no-cache gcc musl-dev libffi-dev openssl-dev && \
+    pip install ansible && \
+    apk del builder
+
+RUN apk add openssh-client
+
+RUN mkdir /root/.ssh && chmod 700 /root/.ssh
+ADD remote1 /root/.ssh/remote1
+ADD config /root/.ssh/config
+
+CMD ["ash"]
